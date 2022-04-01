@@ -153,7 +153,16 @@ require(["dojo/topic", "dijit/Dialog", "dojo/dom-style",
 		/*topic.subscribe("story-loaded-map", function (result) {
 			do not wipe graphics layer on switch
 		)};*/
-				
+		 app.utilitySelector = new utilitySelectorModule();
+            app.utilitySelector.init();
+            var utilitySelectorToolBtn = dom.byId("PMSelect");
+            on(utilitySelectorToolBtn, "click", function (event) {
+                if (app.utilitySelector.isVisible === true) {
+                    app.utilitySelector.hide();
+                } else { // not open
+                    app.utilitySelector.show();
+                }
+            });		
         // The application is ready
         topic.subscribe("tpl-ready", function () {
 
@@ -170,16 +179,7 @@ require(["dojo/topic", "dijit/Dialog", "dojo/dom-style",
             */
 
 			//utility selector open/close onclick
-            app.utilitySelector = new utilitySelectorModule();
-            app.utilitySelector.init();
-            var utilitySelectorToolBtn = dom.byId("PMSelect");
-            on(utilitySelectorToolBtn, "click", function (event) {
-                if (app.utilitySelector.isVisible === true) {
-                    app.utilitySelector.hide();
-                } else { // not open
-                    app.utilitySelector.show();
-                }
-            });
+           
 			
 			//resizes the deafult esri popup max
 			var popup = app.map.infoWindow;
