@@ -162,8 +162,27 @@ require(["dojo/topic", "dijit/Dialog", "dojo/dom-style",
                 } else { // not open
                     app.utilitySelector.show();
                 }
-            });		
-        // The application is ready
+            });		//splash pages
+        let sp = new splashScreenModule();
+            sp.okMessage = 'I Accept';
+            sp.cancelMessage = 'I Decline';
+            sp.isDeclined = false;
+            sp.title= '<b>Disclaimer<b>';
+            sp.content= '<p>&nbsp;<p>I acknowledge that the information from these maps are not intended to replace any procedure, policy or law concerning subsurface utilities; for example, contacting DigAlert, or the individual utility providers directly.<p>&nbsp; <p>I acknowledge and understand that information from these maps are from second and third party sources such as utility providers or unconventional sources. This information is not maintained or controlled by Caltrans. <p>&nbsp;<p>I understand that mapping underground utilities is very difficult. Due to this fact, these maps may not be accurate. Caltrans disclaims all liability for the information provided.<p>&nbsp; <p><b><u><span style="color:red;">Accept if you agree to the terms above to acces the map:</span></u><b></p><p>&nbsp;';
+            sp.style='width: 500px; height: 410px;border: 3px #b6dbff solid; padding-bottom: 10px;';
+            sp.show().then(function(wasOkBtnClicked){
+                if (wasOkBtnClicked){
+                    sp.okMessage = 'Continue';
+                    sp.isDeclined = true;
+                    sp.title= '<b>Map Tips<b>';
+                    sp.content= '<p><b>1.</b> Each tab contains a unique map.  When you switch tabs, the <span style="color:red;">geographic location</span> from the last map carries to the next<p>&nbsp;<p><b>2.</b> Zoom to <span style="color:red;">street level</span> to view all layers on each map (zoom in/out using the <span style="color: red">+/-</span> buttons or <span style="color: red">double-click</span> to just zoom in)<p>&nbsp;<p><b>3.</b> Click on a <span style="color:red;">map feature</span> to view more info; e.g. outlet<p>&nbsp;<p><b>4.</b> Use the <span style="color:red;">magnifier</span> to search by address or place</p><p>&nbsp;<p><b>5.</b> <span style="color:red;">Hover</span> over each tab for more info</p><p>&nbsp;<p><b>6.</b> Click the google man button, then click anywhere on the map to access <span style="color:red;">google streetview</span> in a new tab (zoom in as far in as possible for accuracy)</p><p>&nbsp;</p><p><b>7.</b> Coordinates based on <span style="color:red;">mouse hover</span> are at the bottom of each tab (decimal degrees) </p><p>&nbsp;</p><p><b>8.</b> Use the PM button to <span style="color:red;">select a range</span> of postmiles on the map (click the button again to <span style="color:red">clear</span> the selection)</p><p>&nbsp;</p><p><b>9.</b> Use the thumbnail at the bottom right to <span style="color:red;">toggle basemaps</span><p>&nbsp;</p><p><b>10.</b> Click the download button to download gis source data	(Sanitation/Stormwater<span style="color:red;"> only </span>. Check the source links for more)</span></p><p>&nbsp;</p>';
+                    sp.style='width: 450px; height: 573px; border: 3px #b6dbff solid;font-size: 13px';
+                    sp.show().then(function(wasOkBtnClicked){
+                    });        
+                }else{
+                    window.location.replace('https://lacounty.gov');
+                }
+            });// The application is ready
         topic.subscribe("tpl-ready", function () {
 
             /*
@@ -208,27 +227,8 @@ require(["dojo/topic", "dijit/Dialog", "dojo/dom-style",
              //   var dnd = new Moveable(moveableSelector);
            // });
 			
-			//splash pages
-            let sp = new splashScreenModule();
-            sp.okMessage = 'I Accept';
-            sp.cancelMessage = 'I Decline';
-            sp.isDeclined = false;
-            sp.title= '<b>Disclaimer<b>';
-            sp.content= '<p>&nbsp;<p>I acknowledge that the information from these maps are not intended to replace any procedure, policy or law concerning subsurface utilities; for example, contacting DigAlert, or the individual utility providers directly.<p>&nbsp; <p>I acknowledge and understand that information from these maps are from second and third party sources such as utility providers or unconventional sources. This information is not maintained or controlled by Caltrans. <p>&nbsp;<p>I understand that mapping underground utilities is very difficult. Due to this fact, these maps may not be accurate. Caltrans disclaims all liability for the information provided.<p>&nbsp; <p><b><u><span style="color:red;">Accept if you agree to the terms above to acces the map:</span></u><b></p><p>&nbsp;';
-            sp.style='width: 500px; height: 410px;border: 3px #b6dbff solid; padding-bottom: 10px;';
-            sp.show().then(function(wasOkBtnClicked){
-                if (wasOkBtnClicked){
-                    sp.okMessage = 'Continue';
-                    sp.isDeclined = true;
-                    sp.title= '<b>Map Tips<b>';
-                    sp.content= '<p><b>1.</b> Each tab contains a unique map.  When you switch tabs, the <span style="color:red;">geographic location</span> from the last map carries to the next<p>&nbsp;<p><b>2.</b> Zoom to <span style="color:red;">street level</span> to view all layers on each map (zoom in/out using the <span style="color: red">+/-</span> buttons or <span style="color: red">double-click</span> to just zoom in)<p>&nbsp;<p><b>3.</b> Click on a <span style="color:red;">map feature</span> to view more info; e.g. outlet<p>&nbsp;<p><b>4.</b> Use the <span style="color:red;">magnifier</span> to search by address or place</p><p>&nbsp;<p><b>5.</b> <span style="color:red;">Hover</span> over each tab for more info</p><p>&nbsp;<p><b>6.</b> Click the google man button, then click anywhere on the map to access <span style="color:red;">google streetview</span> in a new tab (zoom in as far in as possible for accuracy)</p><p>&nbsp;</p><p><b>7.</b> Coordinates based on <span style="color:red;">mouse hover</span> are at the bottom of each tab (decimal degrees) </p><p>&nbsp;</p><p><b>8.</b> Use the PM button to <span style="color:red;">select a range</span> of postmiles on the map (click the button again to <span style="color:red">clear</span> the selection)</p><p>&nbsp;</p><p><b>9.</b> Use the thumbnail at the bottom right to <span style="color:red;">toggle basemaps</span><p>&nbsp;</p><p><b>10.</b> Click the download button to download gis source data	(Sanitation/Stormwater<span style="color:red;"> only </span>. Check the source links for more)</span></p><p>&nbsp;</p>';
-                    sp.style='width: 450px; height: 573px; border: 3px #b6dbff solid;font-size: 13px';
-                    sp.show().then(function(wasOkBtnClicked){
-                    });        
-                }else{
-                    window.location.replace('https://lacounty.gov');
-                }
-            });
+			
+            
 			
 			
 			/*var splashPage1 = new Dialog({
