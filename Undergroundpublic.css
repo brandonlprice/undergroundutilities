@@ -1,0 +1,351 @@
+﻿body {
+}
+
+#headerDesktop.compact {
+    background-image: url("resources/Captured.PNG");
+}
+
+.nav-bar.isTab {
+    background-image: url("resources/Capturetest.png");
+}
+
+#PMSelectOuter {
+    z-index: 4;
+    position: absolute;
+    left: 9.7px;
+    top: 205px;
+}
+
+#SelectorTable1 {
+    left: 45px;
+    top: 205px;
+    position: absolute;
+    z-index: 1000;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    float: none;
+    width: auto;
+    height: auto;
+    opacity: 1;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    border: 1px solid;
+    padding: 30px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font: normal 16px/1 "Sans", serif;
+    color: black;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    background: blue;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    text-shadow: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+    -webkit-transform: none;
+    transform: none;
+    -webkit-transform-origin: 50% 50% 0;
+    transform-origin: 50% 50% 0;
+	color: #a9a9a9;
+	text-shadow: .5px 1px black;
+}
+
+#togglebasemapouter {
+    z-index: 4;
+    position: absolute;
+    right: 5.90px;
+    bottom: 5.90px;
+}
+
+.claro .dijitTitlePane .dijitClosed .dijitArrowNode {
+    background-position: 3px 0;
+    background-image: url("image/download.png");
+    height: 11px;
+    // change with your image dimensions width: 11.5px;
+    // change with your image dimensions
+}
+
+.claro .dijitTitlePane .dijitOpen .dijitArrowNode {
+    background-position: 3px 0;
+}
+
+.claro .dijitTitlePane .dijitArrowNode {
+    background-image: url("image/download.png") !important;
+    background-repeat: no-repeat;
+    height: 11px !important;
+    // change with your image dimensions width: 11.5px;
+    // change with your image dimensions
+}
+
+.claro .dijitTitlePane .dijitArrowNode, .claro .dijitFieldset .dijitArrowNode {
+    width: 12.5px !important;
+}
+
+.PaneContent.dijitTitlePane .dijitArrowNode {
+  display: none !important;
+}
+
+.download .dijitTitlePaneTitle {
+    padding: 0 0 3px 5px;
+    background-color: white;
+    border-radius: 2px;
+    border: 1px solid black;
+    width: 30px;
+    height: 30px;
+}
+
+.download .dijitTitlePaneContentInner {
+    border: 1px solid black;
+    margin-top: 7px;
+}
+
+.dijitTitlePaneTitle * {
+	vertical-align: bottom;
+}
+
+#PMSelect {
+    border-radius: 3px;
+    background-color: black;
+    height: 31.7px;
+    width: 31.7px;
+    text-align: center !important;
+    font-size: 11px;
+    border: 1px solid #3a3a3a;
+    color: white;
+    border-color: white;
+}
+
+    #PMSelect .tooltiptext {
+        visibility: hidden;
+        padding: 4px 8px;
+        color: #333;
+        position: absolute;
+        top: 5px;
+        left: 35px;
+        z-index: 20;
+        white-space: nowrap;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        -moz-box-shadow: 0px 0px 4px #222;
+        -webkit-box-shadow: 0px 0px 4px #222;
+        box-shadow: 0px 0px 4px #222;
+        background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
+        background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #eeeeee),color-stop(1, #cccccc));
+        background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc);
+        background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
+        background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
+        background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
+        display: inline;
+    }
+
+    #PMSelect:hover .tooltiptext {
+        visibility: visible;
+    }
+
+#electric {
+    z-index: 1000;
+    position: absolute;
+    left: 5px;
+    top: 625px;
+    background-color: white;
+    font-size: 10px;
+    border: solid 1px black;
+    display: none !important;
+}
+<!-- #gas {
+    z-index: 999;
+    position: absolute;
+    left: 6px;
+    top: 626px;
+    background-color: white;
+    font-size: 10px;
+    border: solid 1px black;
+}
+<!-- Street View Style -->
+<!-- Street View Style -->
+#streetvouter {
+    position: absolute;
+    left: 4.65px;
+    top: 166.5x;
+}
+
+#streetv {
+    margin-left: 5px;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    z-index: 4;
+    position: absolute;
+    left: 4.65px;
+    top: 166.5px;
+    border-color: #57585A;
+    padding: 5px 10px;
+}
+
+#togglebasemap {
+    height: 55px;
+    width: 55px;
+    border: 1.25px solid white;
+}
+
+#image {
+    position: absolute;
+    display: none;
+    z-index: 1001;
+}
+
+#image2 {
+    position: absolute;
+    display: none;
+    z-index: 1001;
+}
+<!-- Street View Style -->
+<!-- Street View Style -->
+.innerDiv {
+    position: relative;
+    background: green;
+    width: 100px;
+    height: 100px;
+    top: 50px;
+    margin-left: 50px;
+}
+
+#mapgal {
+    margin-right: 108px !important;
+    margin-top: -2.84px;
+    color: white !important;
+    text-shadow: .25px .25px .25px #000, -.25px -.25px .25px #000, -.25px .25px .25px #000, .25px -.25px .25px #000;
+    font-size: 10.8px !important;
+    font-style: italic;
+    font-weight: 600 !important;
+}
+
+#xy {
+    position: absolute;
+    left: 635px;
+    bottom: 3.5px;
+    color: #000;
+    z-index: 50;
+    background-color: #fff;
+    font-size: 10.3px;
+}
+
+#coordInfo {
+    color: #000;
+}
+
+@media (min-width:768px) and (max-width:895px) {
+    #xy {
+        position: absolute;
+        left: 430px !important;
+        bottom: 5px;
+        color: #000;
+        z-index: 50;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #xy {
+        position: absolute;
+        left: 5px !important;
+        bottom: 5px;
+        color: #000;
+        z-index: 50;
+    }
+}
+
+
+
+.dijitEditorIcon {
+    background-image: url('images/editorIconsEnabled.png');
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+}
+
+.arcgisSearch .showSuggestions .suggestionsMenu {
+    display: block;
+    z-index: 1001;
+    left: 35px;
+    width: 150%;
+    background: linear-gradient(to right, rgba(0,0,0,.978), rgba(0,0,0,.82), rgba(0,0,0,.75));
+    color: #aaaaaa;
+}
+
+.esriPopup a {
+    color: #050fff !important;
+	text-shadow: none;
+	text-decoration: none;
+}
+
+.esriPopup a:hover {
+	text-shadow: none;
+}
+
+.esriPopup.light .titlePane .title, .esriPopup.dark .titlePane .title {
+    line-height: 5px !important;
+}
+
+.textEditorContent a, .accordionPanel .builder-lbl {
+    text-shadow: none;
+    font-size: 10.5px;
+}
+.textEditorContent a:hover, .accordionPanel .builder-lbl {
+    text-shadow: #000 .05px .1px !important;
+    font-size: 10.5px;
+}
+#SelectorTable {
+	cursor: move;
+}
+#SelectorTable td, th {
+    padding: 3px;
+	font-size: 11.9px;
+}
+#Pane {
+	text-align: center;
+}
+.esriPopupMaximized {
+	left: 105px !important;
+	bottom: 50px !important;
+}
+#wrapper {
+	position: absolute;
+    left: 4.65px;
+    top: 166.5x;
+	z-index: 4;
+}
+.esriPopup.light .actionsPane .action, .esriPopup.light .esriViewPopup .gallery .mediaIcon, .esriPopup.light .esriViewPopup .gallery .mediaHandle, .esriPopup.light .titleButton {
+    color: #ffffff !important;
+}
+.esriPopup.light .contentPane, .esriPopup.light .titlePane, .esriPopup.light .actionsPane {
+	cursor: move
+}
+.mobilePopup {
+	bottom: 70px !important;
+	width: 81.25% !important;
+}
+
+#layerListPane {
+	z-index: 4 !important;
+	width:25% !important;
+	background-color: #ffffff !important;
+}
+#Selector{
+	background-color: #ffffff !important;
+}
+.menu:after {
+	content: "\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0\A0 Sources Layers from multiple agencies. Contact: D7GIS.GROUP@DOT.CA.GOV";
+    color:red;
+	text-align: center;
+	font-size: 11px;
+++,}
+.claro .dijitDialogPaneContent {
+	height: 800px;
+}
+
