@@ -38,7 +38,7 @@ require(["dojo/topic", "dijit/Dialog", "dojo/dom-style",
                 app.map.removeLayer(baseLyr);
                 var vectorTileLayer = new VectorTileLayer("https://services.arcgisonline.com/arcgis/rest/services/Canvas/World_Dark_Gray_Base/MapServer");
                 app.map.addLayer(vectorTileLayer, 0);
-                $('#togglebasemap').css('background-image', 'url(https://caltrans.maps.arcgis.com/sharing/rest/content/items/0e0aa048cb9a42de91ae287fc5632fac/info/thumbnail/thumbnail.png)');
+                $('#togglebasemap').css('background-image', 'url(https://www.arcgis.com/sharing/rest/content/items/4110b592e8024daea97cd1ccc3593624/info/thumbnail/thumbnail.png)');
             }
         });
 
