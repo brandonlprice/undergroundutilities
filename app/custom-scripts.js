@@ -34,7 +34,7 @@ require(["dojo/topic", "dijit/Dialog", "dojo/dom-style",
                 var tiled = new ArcGISTiledMapServiceLayer("https://public.gis.lacounty.gov/public/rest/services/LACounty_Cache/LACounty_Base/MapServer");
                 app.map.addLayer(tiled, 0);
                 $('#togglebasemap').css('background-image', 'url(https://caltrans.maps.arcgis.com/sharing/rest/content/items/0e0aa048cb9a42de91ae287fc5632fac/info/thumbnail/thumbnail.png)');
-            } else if (baseLyr.url === "http://public.gis.lacounty.gov/public/rest/services/LACounty_Cache/LACounty_Base/MapServer") {
+            } else if (baseLyr.url === "https://public.gis.lacounty.gov/public/rest/services/LACounty_Cache/LACounty_Base/MapServer") {
                 app.map.removeLayer(baseLyr);
                 var vectorTileLayer = new VectorTileLayer("https://services.arcgisonline.com/arcgis/rest/services/Canvas/World_Dark_Gray_Base/MapServer");
                 app.map.addLayer(vectorTileLayer, 0);
