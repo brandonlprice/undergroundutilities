@@ -36,7 +36,7 @@ require(["dojo/topic", "dijit/Dialog", "dojo/dom-style",
                 $('#togglebasemap').css('background-image', 'url(https://caltrans.maps.arcgis.com/sharing/rest/content/items/0e0aa048cb9a42de91ae287fc5632fac/info/thumbnail/thumbnail.png)');
             } else if (baseLyr.url === "https://public.gis.lacounty.gov/public/rest/services/LACounty_Cache/LACounty_Base/MapServer") {
                 app.map.removeLayer(baseLyr);
-                var vectorTileLayer = new VectorTileLayer("https://basemaps.arcgis.com/arcgis/rest/services/World_Basemap_v2/VectorTileServer");
+                var vectorTileLayer = new ArcGISTiledMapServiceLayer("https://services.arcgisonline.com/arcgis/rest/services/Canvas/World_Dark_Gray_Base/MapServer");
                 app.map.addLayer(vectorTileLayer, 0);
                 $('#togglebasemap').css('background-image', 'url(https://www.arcgis.com/sharing/rest/content/items/4110b592e8024daea97cd1ccc3593624/info/thumbnail/thumbnail.png)');
             }
