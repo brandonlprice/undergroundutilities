@@ -31,14 +31,14 @@ require(["dojo/topic", "dijit/Dialog", "dojo/dom-style",
             var baseLyr = app.map.getLayer(app.map.layerIds[0]);
             if (baseLyr.url === "https://services.arcgisonline.com/arcgis/rest/services/Canvas/World_Dark_Gray_Base/MapServer") {
                 app.map.removeLayer(baseLyr);
-                var tiled = new ArcGISTiledMapServiceLayer("http://public.gis.lacounty.gov/public/rest/services/LACounty_Cache/LACounty_Base/MapServer");
+                var tiled = new ArcGISTiledMapServiceLayer("https://public.gis.lacounty.gov/public/rest/services/LACounty_Cache/LACounty_Base/MapServer");
                 app.map.addLayer(tiled, 0);
-                $('#togglebasemap').css('background-image', 'url(http://caltrans.maps.arcgis.com/sharing/rest/content/items/0e0aa048cb9a42de91ae287fc5632fac/info/thumbnail/thumbnail.png)');
+                $('#togglebasemap').css('background-image', 'url(https://caltrans.maps.arcgis.com/sharing/rest/content/items/0e0aa048cb9a42de91ae287fc5632fac/info/thumbnail/thumbnail.png)');
             } else if (baseLyr.url === "http://public.gis.lacounty.gov/public/rest/services/LACounty_Cache/LACounty_Base/MapServer") {
                 app.map.removeLayer(baseLyr);
-                var vectorTileLayer = new VectorTileLayer("http://www.arcgis.com/sharing/rest/content/items/0e0aa048cb9a42de91ae287fc5632fac/resources/styles/root.json");
+                var vectorTileLayer = new VectorTileLayer("https://services.arcgisonline.com/arcgis/rest/services/Canvas/World_Dark_Gray_Base/MapServer");
                 app.map.addLayer(vectorTileLayer, 0);
-                $('#togglebasemap').css('background-image', 'url(http://caltrans.maps.arcgis.com/sharing/rest/content/items/10df2279f9684e4a9f6a7f08febac2a9/info/thumbnail/ago_downloaded.jpg)');
+                $('#togglebasemap').css('background-image', 'url(https://caltrans.maps.arcgis.com/sharing/rest/content/items/0e0aa048cb9a42de91ae287fc5632fac/info/thumbnail/thumbnail.png)');
             }
         });
 
