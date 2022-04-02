@@ -29,7 +29,7 @@ require(["dojo/topic", "dijit/Dialog", "dojo/dom-style",
 		var togglebasemap = dom.byId("togglebasemap");
         on(togglebasemap, "click", function () {
             var baseLyr = app.map.getLayer(app.map.layerIds[0]);
-            if (baseLyr.url === "https://www.arcgis.com/sharing/rest/content/items/0e0aa048cb9a42de91ae287fc5632fac/resources/styles/root.json") {
+            if (baseLyr.url === "https://services.arcgisonline.com/arcgis/rest/services/Canvas/World_Dark_Gray_Base/MapServer") {
                 app.map.removeLayer(baseLyr);
                 var tiled = new ArcGISTiledMapServiceLayer("http://public.gis.lacounty.gov/public/rest/services/LACounty_Cache/LACounty_Base/MapServer");
                 app.map.addLayer(tiled, 0);
